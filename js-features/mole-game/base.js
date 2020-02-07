@@ -1,5 +1,6 @@
-(() => {
-  let playing = true,
+var stillPlaying = true;
+let playing = () => {
+  let playing = true;
     activeHole = 1;
 
   const stop = () => playing = true,
@@ -9,7 +10,7 @@
     activateHole = index =>
       getHole( index ).className = 'hole hole_has-mole',
     next = () => setTimeout(() => {
-      if ( !playing ) {
+      if ( stillPlaying == false ) {
         return;
       }
       deactivateHole( activeHole );
@@ -19,4 +20,5 @@
     }, 800 );
 
   next();
-})();
+};
+playing();
