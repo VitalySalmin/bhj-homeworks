@@ -24,6 +24,28 @@ class Game {
       В случае правильного ввода слова вызываем this.success()
       При неправильном вводе символа - this.fail();
      */
+
+     /* я столкнулся с проблемой - я не могу вызвать this.success() 
+     после сравнения текущего символа с введенным, т.к. всегда this.success()
+     вызывается из функции,напрямую работает
+     (не из функции, а допустим, просто из условной конструкции)
+     я пробовал через промис/async даже, но я не знаю как запустить условие проверки
+     только после нажатия и чтобы оно не было частью функции при этом. Пожалуйста, помогите/подскажите
+     */
+
+    console.log("started registering")
+    let currentKey;
+    let currentSymbol = this.currentSymbol;
+    function getKey(event) {
+       currentKey = event.key
+       console.log(currentKey)
+       if (currentKey == currentSymbol.textContent) {
+       	this.success()
+        //correctSymbol = true
+       }   
+    }  
+
+    document.addEventListener('keydown', getKey);  
   }
 
   success() {
@@ -87,4 +109,3 @@ class Game {
 }
 
 new Game(document.getElementById('game'))
-
