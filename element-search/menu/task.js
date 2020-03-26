@@ -1,3 +1,4 @@
+
 const makeActiveClass = "menu_active";
 const menuLinks = document.getElementsByClassName("menu__link"); 
 const menuItems = document.getElementsByClassName("menu_sub");
