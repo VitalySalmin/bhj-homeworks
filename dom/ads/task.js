@@ -1,5 +1,6 @@
 const ads = document.querySelectorAll(".rotator__case")
 
+
 setInterval(function changeAd() {
 	console.log("started")
 	for (var i = 0; i < ads.length; i++) {
