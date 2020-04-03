@@ -31,16 +31,20 @@ class Game {
      (не из функции, а допустим, просто из условной конструкции)
      я пробовал через промис/async даже, но я не знаю как запустить условие проверки
      только после нажатия и чтобы оно не было частью функции при этом. Пожалуйста, помогите/подскажите
+    я также пробовал сделать переменную для вызова функции, 
+    но при вызове переменной он не может получить this.currentSymbol через метод success() 
+
      */
 
-    console.log("started registering")
+    //console.log("started registering")
+
+
     let currentKey;
     let currentSymbol = this.currentSymbol;
     function getKey(event) {
        currentKey = event.key
        console.log(currentKey)
        if (currentKey == currentSymbol.textContent) {
-       	this.success()
         //correctSymbol = true
        }   
     }  

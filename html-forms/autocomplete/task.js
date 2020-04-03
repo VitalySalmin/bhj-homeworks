@@ -81,12 +81,23 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
+
+    let searchString = this.searchInput.value
+    
+    console.log(this.input.children[0].textContent)
+    const possibleValues = this.input.children
+    let arrayToReturn = []
+    Array.from(possibleValues).forEach(function(child) {
+      console.log(searchString)
+      
+      if(child.textContent.includes(searchString)) {
+        arrayToReturn.push({
+          text: child.textContent,
+          value: child.value
+        })
       }
-    ];
+    })
+    return arrayToReturn
   }
 }
 
