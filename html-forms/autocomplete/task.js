@@ -85,7 +85,7 @@ class Autocomplete {
 
     let searchString = this.searchInput.value
     
-    console.log(this.input.children[0].textContent)
+    //console.log(this.input.children[0].textContent)
     const possibleValues = this.input.children
     let arrayToReturn = []
     Array.from(possibleValues).forEach(function(child) {
