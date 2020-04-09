@@ -46,6 +46,7 @@ class Autocomplete {
 
     this.searchInput.classList.remove( 'autocomplete__search_active' );
     this.list.classList.remove( 'autocomplete__list_active' );
+    
   }
 
   onSearch() {

@@ -41,13 +41,14 @@ class Game {
 
     let currentKey;
     let currentSymbol = this.currentSymbol;
-    function getKey(event) {
+    let getKey = (event) => {  
        currentKey = event.key
        console.log(currentKey)
        if (currentKey == currentSymbol.textContent) {
-        //correctSymbol = true
-       }   
-    }  
+       	this.sucess()
+       }
+    };
+    
 
     document.addEventListener('keydown', getKey);  
   }
