@@ -34,7 +34,7 @@ class Game {
        currentKey = event.key
        console.log(currentKey)
        if (currentKey == currentSymbol.textContent) {
-       	this.sucess()
+       	this.success()
        }
     };
     
