@@ -42,7 +42,7 @@ Array.from(addToBin).forEach(function(add) {
 
   	itemToPut.querySelector('.cart__product-count').textContent = Number(quantity) + Number(itemToPut.querySelector('.cart__product-count').textContent)
   	
-  } else {
+  } else if(Number(quantity) >= 1) {
   			bin.innerHTML += `
               <div class="cart__product" data-id=${id}>
                 <img class="cart__product-image" src=${img}>

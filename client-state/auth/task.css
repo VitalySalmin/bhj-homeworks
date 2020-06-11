@@ -28,6 +28,18 @@ body {
   cursor: pointer;
 }
 
+.btn_out {
+  background: red;
+  color: white;
+  padding: 20px;
+  border-radius: 25px;
+  border: none;
+  display: block;
+  width: 200px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 .welcome {
   display: none;
 }

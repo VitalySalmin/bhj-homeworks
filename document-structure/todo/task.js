@@ -12,7 +12,8 @@ let itemsToRemove = document.querySelectorAll(".task__remove")
 
 add.addEventListener("click", function(event){
 	event.preventDefault()
-    list.innerHTML += `
+    if(!(input.value.replace(/\s/g, '').length == 0)) {
+    	list.innerHTML += `
       <div class="task">
               <div class="task__title">
                 ${input.value}
@@ -20,7 +21,7 @@ add.addEventListener("click", function(event){
               <a href="#" class="task__remove">&times;</a>
             </div>
     `
-
+    }
     localStorage.setItem('list', `${list.innerHTML}`)
     input.value = ""   
 
