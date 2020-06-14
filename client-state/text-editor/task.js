@@ -1,6 +1,9 @@
 	const editor = document.getElementById("editor");
 	const eraser = document.getElementById("erase");
-    editor.value = localStorage.textarea;
+    if(localStorage.textarea) {
+
+	  editor.value = localStorage.textarea;
+	}
 
 	editor.addEventListener("input", function() {
 		localStorage.textarea = editor.value;
